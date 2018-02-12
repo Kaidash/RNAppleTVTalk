@@ -18,7 +18,7 @@
 {
   NSURL *jsCodeLocation;
 
-    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios"
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"
                                                                     fallbackResource:@"RNAppleTVTalk.ios"];
     if(jsCodeLocation == nil) {
       NSLog(@"The React Native packager is not running.  Please run 'npm start' from the RN directory.");

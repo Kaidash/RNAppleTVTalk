@@ -29,6 +29,7 @@ import React, { Component } from 'react';
 
 import {
   ScrollView,
+  Platform,
   TabBarIOS,
   Text,
   Image,
@@ -77,7 +78,7 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return (Platform.OS === 'ios' ?
       <TabBarIOS
         unselectedTintColor="white"
         tintColor="red"
@@ -148,7 +149,15 @@ class App extends Component {
             <VictoryDemo />
           </Slide>
         </TabBarIOS.Item>
-      </TabBarIOS>
+      </TabBarIOS> : <View style={styles.contentContainer}>
+          <TextInput
+            ref='1'
+            style={styles.input}
+            placeholder='Normal'
+            returnKeyType='next'
+            blurOnSubmit={false}
+          />
+        </View>
     );
   }
 }
